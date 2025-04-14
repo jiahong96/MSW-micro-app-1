@@ -1,4 +1,11 @@
 import { http, HttpResponse, delay } from "msw";
+import insurances from "./data/insurances.json";
+
+export interface Insurance {
+  id: number;
+  name: string;
+  description: string;
+}
 
 export const handlers = [
   http.get("/insurances", async () => {
@@ -6,17 +13,6 @@ export const handlers = [
 
     await delay();
 
-    return HttpResponse.json([
-      {
-        id: 1,
-        name: "Insurance A",
-        description: "Description A",
-      },
-      {
-        id: 2,
-        name: "Insurance B",
-        description: "Description B",
-      },
-    ]);
+    return HttpResponse.json(insurances);
   }),
 ];
