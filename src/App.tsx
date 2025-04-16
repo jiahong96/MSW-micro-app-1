@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { Insurance } from "./mocks/handlers.ts";
-if (process.env.NODE_ENV !== "test") {
+
+// Registers MSW handlers using global MSW instance in production mode
+if (import.meta.env.MODE === "production") {
   import("./msw.ts");
 }
 
