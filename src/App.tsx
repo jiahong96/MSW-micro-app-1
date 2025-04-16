@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { Insurance } from "./mocks/handlers.ts";
-import "./msw.ts";
+if (process.env.NODE_ENV !== "test") {
+  import("./msw.ts");
+}
 
 function App() {
   const [insurances, setInsurances] = useState<Insurance[]>([]);
