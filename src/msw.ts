@@ -1,3 +1,6 @@
 import { handlers } from "./mocks/handlers";
+import { setupWorker } from "msw/browser";
 
-window.mswWorker.use(...handlers);
+if (window.mswWorker) window.mswWorker.use(...handlers);
+
+export const localDevWorker = setupWorker(...handlers);

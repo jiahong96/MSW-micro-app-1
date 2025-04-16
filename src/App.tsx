@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import "./msw.ts";
 import { Insurance } from "./mocks/handlers.ts";
+import "./msw.ts";
 
 function App() {
   const [insurances, setInsurances] = useState<Insurance[]>([]);
