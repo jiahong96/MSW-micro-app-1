@@ -18,5 +18,25 @@
       "type": "partial",
       "details": "Partial coverage details"
     }
+  },
+  {
+    "id": 3,
+    "name": "Health Insurance",
+    "description": "Aliqua laboris excepteur incididunt laboris. Excepteur excepteur occaecat irure nostrud. Adipisicing reprehenderit do laboris id.",
+    "amount": 3000,
+    "coverage": {
+      "type": "full",
+      "details": "Full coverage details"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Home Insurance",
+    "description": "Exercitation sint enim esse amet. Amet anim pariatur aliqua non. Nostrud laboris voluptate excepteur proident.",
+    "amount": 1500,
+    "coverage": {
+      "type": "partial",
+      "details": "Partial coverage details"
+    }
   }
 ]
